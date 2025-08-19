@@ -1,0 +1,8 @@
+"""
+cost.py - toy cost estimation
+"""
+def estimate_cost_musd(dam_height, crest_length, capacity_mw):
+    a = 0.05
+    civil = a * dam_height * crest_length
+    em = 0.9 * capacity_mw
+    return round(civil + em, 3)
